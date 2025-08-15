@@ -11,6 +11,7 @@
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
   color-scheme: dark;
+  /* background-color: #4B2E2E; */
 }
 
 .hash-span {
@@ -19,11 +20,11 @@
   display: block;
 }
 
-/* .black-gradient {
-  background: #000000;
-  background: -webkit-linear-gradient(to right, #434343, #000000);
-  background: linear-gradient(to right, #434343, #000000);
-} */
+.black-gradient {
+  background: #4B2E2E;;
+  background: -webkit-linear-gradient(to right, #6A4A4A, #4B2E2E);
+  background: linear-gradient(to right, #6A4A4A, #4B2E2E);
+}
 
 .violet-gradient {
   background: #804dee;
