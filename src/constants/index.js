@@ -1,22 +1,16 @@
 import {
-  mobile,
-  creator,
-  web,
-  javascript,
-  typescript,
-  html,
   css,
+  figma,
+  frontend,
+  git,
+  html,
+  javascript,
+  mobile,
+  mongodb,
   reactjs,
   tailwind,
-  mongodb,
-  git,
-  figma,
-  starbucks,
-  tesla,
-  carrent,
-  jobit,
-  threejs,
-  frontend,
+  typescript,
+  web,
 } from "../assets";
 
 export const navLinks = [
@@ -46,10 +40,6 @@ const services = [
   {
     title: "Frontend Developer",
     icon: frontend,
-  },
-  {
-    title: "Content Creator",
-    icon: creator,
   },
 ];
 
@@ -84,10 +74,6 @@ const technologies = [
     icon: mongodb,
   },
   {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
     name: "git",
     icon: git,
   },
@@ -101,7 +87,7 @@ const experiences = [
   {
     title: "React.js Developer",
     company_name: "Solvd",
-    icon: starbucks,
+    icon: 'solvd icon',
     iconBg: "#383E56",
     date: "February 2025 - present",
     points: [
@@ -114,7 +100,7 @@ const experiences = [
   {
     title: "Frontend mentor",
     company_name: "GoIteens",
-    icon: tesla,
+    icon: 'goiteens icon',
     iconBg: "#E6DEDD",
     date: "Apr 2023 - Aug 2025",
     points: [
@@ -154,7 +140,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
+    image: "current",
     source_code_link: "link for the project",
   },
   {
@@ -175,7 +161,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
+    image: 'project icon',
     source_code_link: "https://github.com/",
   },
   {
@@ -196,9 +182,9 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
+    image: 'project ison',
     source_code_link: "https://github.com/",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { experiences, projects, services, technologies, testimonials };
