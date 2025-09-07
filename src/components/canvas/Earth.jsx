@@ -1,15 +1,29 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-
+import * as THREE from "three";
 import CanvasLoader from "../Loader";
 
 const Earth = () => {
   const earth = useGLTF("/planet/scene.gltf");
 
-  return (
-    <primitive object={earth.scene} scale={2.5} position-y={0} rotation-y={0} />
-  );
+  useEffect(() => {
+    // Keep your perfect scale but improve rendering
+    earth.scene.scale.set(0.25, 0.25, 0.25);
+ 
+    earth.scene.position.set(0, 0, 0);
+
+    // Improve rendering quality for small objects
+    earth.scene.traverse((child) => {
+      if (child.isMesh) {
+        child.material.precision = "highp"; // Higher precision
+        child.material.dithering = true; // Reduces banding
+        child.renderOrder = 1; // Controls render order
+      }
+    });
+  }, [earth]);
+
+  return <primitive object={earth.scene} />;
 };
 
 const EarthCanvas = () => {
@@ -17,24 +31,40 @@ const EarthCanvas = () => {
     <Canvas
       shadows
       frameloop="demand"
-      dpr={[1, 2]}
-      gl={{ preserveDrawingBuffer: true }}
+      dpr={[1.5, 2]} // Higher DPR for better quality
+      gl={{
+        preserveDrawingBuffer: true,
+        antialias: true, // Enable antialiasing
+        alpha: true,
+        powerPreference: "high-performance",
+        logarithmicDepthBuffer: true, // Fixes z-fighting for small objects
+      }}
       camera={{
-        fov: 45,
-        near: 0.1,
-        far: 200,
-        position: [-4, 3, 6],
+        fov: 35,
+        near: 0.01, // Smaller near plane for small objects
+        far: 1000, // Larger far plane for better depth range
+        position: [0, 17, 8],
       }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           autoRotate
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
+          enableZoom={true}
+          enablePan={false}
+          minDistance={6}
+          maxDistance={12}
         />
-        <Earth />
 
+        {/* Improved lighting */}
+        <ambientLight intensity={0.7} />
+        <directionalLight
+          position={[15, 15, 15]}
+          intensity={1.2}
+          shadow-mapSize={[2048, 2048]} // Higher quality shadows
+        />
+        <pointLight position={[-10, -10, -10]} intensity={0.5} />
+
+        <Earth />
         <Preload all />
       </Suspense>
     </Canvas>
