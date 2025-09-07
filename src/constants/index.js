@@ -1,16 +1,20 @@
 import {
-  css,
-  figma,
-  frontend,
-  git,
-  html,
-  javascript,
   mobile,
-  mongodb,
+  backend,
+  web,
+  javascript,
+  typescript,
+  html,
+  css,
   reactjs,
   tailwind,
-  typescript,
-  web,
+  mongodb,
+  git,
+  figma,
+  solvd,
+  goiteens,
+  shop,
+  validator,
 } from "../assets";
 
 export const navLinks = [
@@ -30,26 +34,26 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Frontend Developer",
     icon: web,
   },
   {
-    title: "React  Developer",
+    title: "React Developer",
     icon: mobile,
   },
   {
-    title: "Frontend Developer",
-    icon: frontend,
+    title: "UI/UX Developer",
+    icon: backend,
   },
 ];
 
 const technologies = [
   {
-    name: "HTML5",
+    name: "HTML 5",
     icon: html,
   },
   {
-    name: "CSS3",
+    name: "CSS 3",
     icon: css,
   },
   {
@@ -69,10 +73,12 @@ const technologies = [
     name: "Tailwind CSS",
     icon: tailwind,
   },
+
   {
     name: "MongoDB",
     icon: mongodb,
   },
+
   {
     name: "git",
     icon: git,
@@ -85,28 +91,40 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
+    title: "Frontend Developer",
     company_name: "Solvd",
-    icon: 'solvd icon',
+    icon: solvd,
     iconBg: "#383E56",
-    date: "February 2025 - present",
+    date: "February 2025 - August 2025",
     points: [
-      "Contributing to the development of several web applications, focusing on creating responsive, user-friendly interfaces with React, JavaScript, HTML, and CSS.",
-      "Working closely with a cross-functional team to translate requirements into functional, visually appealing features.",
-      "Applyingadaptive layout techniques to deliver consistent user experiences across different devices and browsers.",
-      "Actively engaged in peer code reviews, sharing insights and suggesting improvements to maintain code quality and best practices.",
+      "Participating in a professional mentorship program focused on React.js, Next.js, TypeScript, and MUI.",
+      "Completing team-based real-world projects, collaborating on UI development, API integration, and frontend architecture.",
+      "Receiving guidance from senior mentors, improving problem-solving, coding standards, and best practices",
+      "Delivering functional web applications while working in an agile, collaborative environment.",
     ],
   },
   {
-    title: "Frontend mentor",
-    company_name: "GoIteens",
-    icon: 'goiteens icon',
-    iconBg: "#E6DEDD",
-    date: "Apr 2023 - Aug 2025",
+    title: "Freelance Frontend Developer",
+    icon: solvd,
+    iconBg: "#383E56",
+    date: "July 2022 - June 2025",
     points: [
-      "Guiding teenagers in building practical web development skills using React, JavaScript, TypeScript, HTML, CSS, and Git.",
-      "Supporting learners through a combination of exercises and full-scale projects, helping them apply theoretical knowledge to real-world scenarios.",
-      "Providing personalized feedback on code quality, debugging, and best practices, while fostering problem-solving skills and a collaborative learning environment.",
+      "Developing React-based landing pages and small JavaScript projects, such as interactive games and business websites",
+      "Collaborating with clients to create user-friendly interfaces, ensuring compatibility across various devices and browsers",
+      "Collaborating on a team project as part of a diploma work to develop a program for automating thesis quality checks;",
+      "Debugging and testing applications to ensure functionality and performance.",
+    ],
+  },
+  {
+    title: "Frontend coach",
+    company_name: "GoIteens",
+    icon: goiteens,
+    iconBg: "#E6DEDD",
+    date: "April 2023 - August 2025",
+    points: [
+      "Teaching HTML5, CSS3, JavaScript, Node.js, React, and Git to teenagers through practical coding exercises and project-based learning.",
+      "Developing comprehensive course materials and storing them in an organized GitHub repository for easy access",
+      "Guiding students in creating projects such as sticker apps, to-do lists, and search tools using APIs.",
     ],
   },
 ];
@@ -114,77 +132,58 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "Рекомендую Ольгу як висококваліфікованого девелопера. Ми співпрацювали над AI/ML проектом, і я залишився задоволений професіоналізмом та вмінням вирішувати завдання. Ольга - це відмінний вибір для вашого проекту.",
+      "I highly recommend Olha as a highly skilled developer. We collaborated on an AI/ML project, and I was impressed by her professionalism and problem-solving abilities. Olha would be an excellent choice for your project.",
     name: "Olexandr Nоnіk",
-    designation: "Сhief Product Officer | Product Owner | Project Manager",
+    designation: "Product Owner",
     company: "Wise Vision",
-    image: "https://randomuser.me/api/portraits/med/men/19.jpg",
+    image: "hhttps://randomuser.me/api/portraits/men/9.jpg",
   },
 ];
 
 const projects = [
   {
-    name: "Name of the project",
-    description: "Description of the project",
+    name: "Shoes Shop",
+    description:
+      "An online retail platform offering a seamless, user-friendly way to browse, compare, and purchase footwear. Designed to highlight product variety and simplify shopping, it focuses on convenience, style, and customer satisfaction. ",
     tags: [
       {
-        name: "stack",
+        name: "next.js",
         color: "blue-text-gradient",
       },
       {
-        name: "stack",
+        name: "stripe",
         color: "green-text-gradient",
       },
       {
-        name: "stack",
+        name: "strapi",
         color: "pink-text-gradient",
       },
     ],
-    image: "current",
-    source_code_link: "link for the project",
+    image: shop,
+    source_code_link: "https://shoes-shop-team-3.vercel.app/",
+    isPrivate: true,
   },
   {
-    name: "Job IT",
+    name: "Thesis Validator",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "This service validates master's and bachelor's theses in PDF format. It currently offers content checks, bibliography and reference verification, and technical specification assessment, ensuring reliable evaluation to help maintain academic standards.",
     tags: [
       {
-        name: "react",
+        name: "typescript",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "javascript",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "css",
         color: "pink-text-gradient",
       },
     ],
-    image: 'project icon',
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: 'project ison',
-    source_code_link: "https://github.com/",
+    image: validator,
+    source_code_link: "https://github.com/Olha36/diploma-ui",
   },
 ];
 
-export { experiences, projects, services, technologies, testimonials };
+export { services, technologies, experiences, testimonials, projects };
