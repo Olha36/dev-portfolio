@@ -1,21 +1,21 @@
 import {
-  mobile,
   backend,
-  web,
-  javascript,
-  typescript,
-  html,
   css,
-  reactjs,
-  tailwind,
-  mongodb,
-  git,
   figma,
-  solvd,
-  goiteens,
-  shop,
   freelance,
+  git,
+  goiteens,
+  html,
+  javascript,
+  mobile,
+  mongodb,
+  reactjs,
+  shop,
+  solvd,
+  tailwind,
+  typescript,
   validator,
+  web,
 } from "../assets";
 
 export const navLinks = [
@@ -187,4 +187,5 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { experiences, projects, services, technologies, testimonials };
+

@@ -1,13 +1,13 @@
+import { motion } from "framer-motion";
 import React, { useState } from "react";
 import Tilt from "react-parallax-tilt";
-import { motion } from "framer-motion";
 
-import { styles } from "../styles";
 import { github } from "../assets";
-import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
+import { SectionWrapper } from "../hoc";
+import { styles } from "../styles";
 import { fadeIn, textVariant } from "../utils/motion";
-import Info from "./Info"; 
+import Info from "./Info";
 
 const ProjectCard = ({
   index,
@@ -20,13 +20,13 @@ const ProjectCard = ({
 }) => {
   const [showInfo, setShowInfo] = useState(false);
 
-   const handleGithubClick = () => {
-     if (isPrivate) {
-       setShowInfo(true); // 👈 show modal
-     } else {
-       window.open(source_code_link, "_blank"); // 👈 open repo
-     }
-   };
+  const handleGithubClick = () => {
+    if (isPrivate) {
+      setShowInfo(true); // 👈 show modal
+    } else {
+      window.open(source_code_link, "_blank"); // 👈 open repo
+    }
+  };
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
@@ -46,7 +46,6 @@ const ProjectCard = ({
 
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <div
-              // onClick={() => window.open(source_code_link, "_blank")}
               onClick={handleGithubClick}
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
             >
@@ -93,7 +92,7 @@ const ProjectCard = ({
   );
 };
 
-const Works = () => {
+const Projects = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -123,4 +122,4 @@ const Works = () => {
   );
 };
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Projects, "");
