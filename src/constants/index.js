@@ -137,7 +137,7 @@ const testimonials = [
     name: "Olexandr Nоnіk",
     designation: "Product Owner",
     company: "Wise Vision",
-    image: "hhttps://randomuser.me/api/portraits/men/9.jpg",
+    image: "https://randomuser.me/api/portraits/men/9.jpg",
   },
 ];
 
