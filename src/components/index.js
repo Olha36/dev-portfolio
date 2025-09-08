@@ -9,21 +9,12 @@ import Contact from "./Contact";
 import Experience from "./Experience";
 import Feedbacks from "./Feedbacks";
 import Hero from "./Hero";
+import CanvasLoader from "./Loader";
 import Navbar from "./Navbar";
+import Projects from "./Projects";
 import Tech from "./Tech";
-import Works from "./Works";
 
 export {
-  About,
-  BallCanvas,
-  ComputersCanvas,
-  Contact,
-  EarthCanvas,
-  Experience,
-  Feedbacks,
-  Hero,
-  Navbar,
-  StarsCanvas,
-  Tech,
-  Works,
+  About, BallCanvas, CanvasLoader, ComputersCanvas, Contact, EarthCanvas, Experience, Feedbacks, Hero,
+  Navbar, Projects, StarsCanvas, Tech
 };
