@@ -1,8 +1,8 @@
 import logo from "./logo.svg";
-import backend from "./backend.png";
+import backend from "./backend.gif";
 import creator from "./creator.png";
-import mobile from "./mobile.png";
-import web from "./web.png";
+import mobile from "./mobile.gif";
+import web from "./web.gif";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
@@ -25,6 +25,7 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import solvd from "./company/solvd.png";
 import goiteens from "./company/goiteens.png";
+import freelance from './company/freelance.png'
 
 import shop from "./shoes-shop.jpg";
 import validator from './validator.jpg'
@@ -59,4 +60,5 @@ export {
   shop,
   validator,
   tripguide,
+  freelance,
 };

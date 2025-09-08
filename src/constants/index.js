@@ -14,6 +14,7 @@ import {
   solvd,
   goiteens,
   shop,
+  freelance,
   validator,
 } from "../assets";
 
@@ -105,7 +106,7 @@ const experiences = [
   },
   {
     title: "Freelance Frontend Developer",
-    icon: solvd,
+    icon: freelance,
     iconBg: "#383E56",
     date: "July 2022 - June 2025",
     points: [
