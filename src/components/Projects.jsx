@@ -16,16 +16,21 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  live_demo_link,
   isPrivate,
 }) => {
   const [showInfo, setShowInfo] = useState(false);
 
   const handleGithubClick = () => {
     if (isPrivate) {
-      setShowInfo(true); // 👈 show modal
+      setShowInfo(true);
     } else {
-      window.open(source_code_link, "_blank"); // 👈 open repo
+      window.open(source_code_link, "_blank");
     }
+  };
+
+  const handleOpenProject = () => {
+    window.open(live_demo_link, "_blank");
   };
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -44,7 +49,10 @@ const ProjectCard = ({
             className="w-full h-full object-cover rounded-2xl"
           />
 
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+          <div
+            className="absolute inset-0 flex justify-end m-3 card-img_hover"
+            onClick={handleOpenProject}
+          >
             <div
               onClick={handleGithubClick}
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
@@ -112,6 +120,9 @@ const Projects = () => {
           and manage projects effectively.
         </motion.p>
       </div>
+      <p className="mt-3 text-neutral-100 text-[17px] max-w-3xl leading-[30px]">
+        Click on the card to see the live demo
+      </p>
 
       <div className="mt-20 flex flex-wrap gap-7">
         {projects.map((project, index) => (

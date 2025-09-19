@@ -1,67 +1,68 @@
-import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { slideIn } from "../utils/motion";
 import { EarthCanvas } from "./canvas";
+import Swal from "sweetalert2";
+import { useForm } from "react-hook-form";
 
 const Contact = () => {
   const formRef = useRef();
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  const [result, setResult] = React.useState("");
 
-  const [loading, setLoading] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
 
-  const handleChange = (e) => {
-    const { target } = e;
-    const { name, value } = target;
+  const onSubmit = async (data) => {
+    setResult("Sending...");
+    const formData = new FormData();
 
-    setForm({
-      ...form,
-      [name]: value,
-    });
-  };
+    formData.append("name", data.name);
+    formData.append("email", data.email);
+    formData.append("message", data.message | "");
+    formData.append("access_key", "faf674dd-d1ad-4e7c-a4ab-75e7a99b76e5");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoading(true);
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
 
-    emailjs
-      .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: "Portfolio",
-          from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
-          message: form.message,
-        },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+      const data = await response.json();
 
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
-
-          alert("Ahh, something went wrong. Please try again.");
-        }
-      );
+      if (data.success) {
+        Swal.fire({
+          title: "Good job!",
+          text: "Message sent successfully 🙂!",
+          icon: "success",
+          customClass: {
+            confirmButton: styles.swalBtn,
+          },
+        });
+        reset();
+      } else {
+        Swal.fire({
+          title: "Oops!",
+          text: "Something went wrong. Please try again.",
+          icon: "error",
+        });
+      }
+    } catch (error) {
+      console.error(error);
+      Swal.fire({
+        title: "Error!",
+        text: "Network error. Please try again.",
+        icon: "error",
+      });
+    } finally {
+      setResult("");
+    }
   };
 
   return (
@@ -77,7 +78,7 @@ const Contact = () => {
 
         <form
           ref={formRef}
-          onSubmit={handleSubmit}
+          onSubmit={handleSubmit(onSubmit)}
           className="mt-12 flex flex-col gap-8"
         >
           <label className="flex flex-col">
@@ -85,32 +86,35 @@ const Contact = () => {
             <input
               type="text"
               name="name"
-              value={form.name}
-              onChange={handleChange}
               placeholder="What's your good name?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              {...register("name", { required: "Name is required" })}
             />
+            {errors.name && (
+              <span className="text-red-500 mt-1">{errors.name.message}</span>
+            )}
           </label>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your email</span>
             <input
               type="email"
               name="email"
-              value={form.email}
-              onChange={handleChange}
               placeholder="What's your web address?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              {...register("email", { required: "Email is required" })}
             />
+            {errors.email && (
+              <span className="text-red-500 mt-1">{errors.email.message}</span>
+            )}
           </label>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Message</span>
             <textarea
               rows={7}
               name="message"
-              value={form.message}
-              onChange={handleChange}
               placeholder="What you want to say?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              {...register("message")}
             />
           </label>
 
@@ -118,7 +122,8 @@ const Contact = () => {
             type="submit"
             className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
           >
-            {loading ? "Sending..." : "Send"}
+            Submit
+            {result && <p className="text-secondary mt-2">{result}</p>}
           </button>
         </form>
       </motion.div>
