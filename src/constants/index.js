@@ -16,6 +16,7 @@ import {
   typescript,
   validator,
   web,
+  countries,
 } from "../assets";
 
 export const navLinks = [
@@ -162,6 +163,7 @@ const projects = [
     ],
     image: shop,
     source_code_link: "https://shoes-shop-team-3.vercel.app/",
+    live_demo_link: "https://shoes-shop-team-3.vercel.app/",
     isPrivate: true,
   },
   {
@@ -184,8 +186,30 @@ const projects = [
     ],
     image: validator,
     source_code_link: "https://github.com/Olha36/diploma-ui",
+    live_demo_link: "https://olha36.github.io/diploma-ui/",
+  },
+  {
+    name: "Countries",
+    description:
+      "This service provides detailed country information by fetching real-time data from the REST Countries API. It displays flags, capitals, populations, languages, currencies, and regions, offering users a reliable and accessible way to explore global data.",
+    tags: [
+      {
+        name: "typescript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "next.js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: countries,
+    source_code_link: "https://github.com/Olha36/countries-project.git",
+    live_demo_link: "https://countries-rust-three.vercel.app/",
   },
 ];
 
 export { experiences, projects, services, technologies, testimonials };
-

@@ -25,13 +25,32 @@ import solvd from "./company/solvd.png";
 
 import shop from "./shoes-shop.jpg";
 import validator from "./validator.jpg";
+import countries from "./countries.jpg";
 
 export {
-  backend, close, creator, css,
-  figma, freelance, git, github, goiteens, html,
-  javascript, logo, menu, meta, mobile, mongodb,
-  reactjs, shop, shopify,
-  solvd, tailwind,
-  typescript, validator, web
+  backend,
+  close,
+  creator,
+  css,
+  figma,
+  freelance,
+  git,
+  github,
+  goiteens,
+  html,
+  javascript,
+  logo,
+  menu,
+  meta,
+  mobile,
+  mongodb,
+  reactjs,
+  shop,
+  shopify,
+  solvd,
+  tailwind,
+  typescript,
+  validator,
+  web,
+  countries,
 };
-
