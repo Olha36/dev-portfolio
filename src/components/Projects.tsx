@@ -9,7 +9,26 @@ import { styles } from "../styles";
 import { fadeIn, textVariant } from "../utils/motion";
 import Info from "./Info";
 
-const ProjectCard = ({
+interface Tag {
+  name: string;
+  color: string;
+}
+
+interface Project {
+  name: string;
+  description: string;
+  tags: Tag[];
+  image: string;
+  source_code_link: string;
+  live_demo_link: string;
+  isPrivate?: boolean;
+}
+
+interface ProjectCardProps extends Project {
+  index: number;
+}
+
+const ProjectCard: React.FC<ProjectCardProps> = ({
   index,
   name,
   description,
@@ -17,11 +36,12 @@ const ProjectCard = ({
   image,
   source_code_link,
   live_demo_link,
-  isPrivate,
+  isPrivate = false,
 }) => {
   const [showInfo, setShowInfo] = useState(false);
 
-  const handleGithubClick = () => {
+  const handleGithubClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.stopPropagation();
     if (isPrivate) {
       setShowInfo(true);
     } else {
@@ -29,30 +49,31 @@ const ProjectCard = ({
     }
   };
 
-  const handleOpenProject = () => {
+  const handleOpenProject = (e: React.MouseEvent) => {
+    e.preventDefault();
     window.open(live_demo_link, "_blank");
   };
+
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
+        tiltMaxAngleX={45}
+        tiltMaxAngleY={45}
+        scale={1}
+        transitionSpeed={450}
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
       >
-        <div className="relative bg-lime-500 w-full h-[230px]">
+        <div
+          className="relative bg-lime-500 w-full h-[230px] cursor-pointer"
+          onClick={handleOpenProject}
+        >
           <img
             src={image}
             alt="project_image"
             className="w-full h-full object-cover rounded-2xl"
           />
 
-          <div
-            className="absolute inset-0 flex justify-end m-3 card-img_hover"
-            onClick={handleOpenProject}
-          >
+          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <div
               onClick={handleGithubClick}
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
@@ -100,11 +121,10 @@ const ProjectCard = ({
   );
 };
 
-const Projects = () => {
+const Projects: React.FC = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My work</p>
         <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
       </motion.div>
 
@@ -124,7 +144,7 @@ const Projects = () => {
         Click on the card to see the live demo
       </p>
 
-      <div className="mt-20 flex flex-wrap gap-7">
+      <div className="mt-20 flex flex-wrap gap-7 justify-center md:justify-start">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}

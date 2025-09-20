@@ -1,8 +1,8 @@
-
+import React from "react";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 
-const Hero = () => {
+const Hero: React.FC = () => {
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div
@@ -17,9 +17,6 @@ const Hero = () => {
           <h1 className={`${styles.heroHeadText} text-white`}>
             Hello, my <br /> name's <span className="text-[#EFBF04]">Olha</span>
           </h1>
-          {/* <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I develop responsive websites
-          </p> */}
         </div>
       </div>
 

@@ -136,7 +136,7 @@ const testimonials = [
     testimonial:
       "I highly recommend Olha as a highly skilled developer. We collaborated on an AI/ML project, and I was impressed by her professionalism and problem-solving abilities. Olha would be an excellent choice for your project.",
     name: "Olexandr Nоnіk",
-    designation: "Product Owner",
+    position: "Product Owner",
     company: "Wise Vision",
     image: "https://randomuser.me/api/portraits/men/9.jpg",
   },

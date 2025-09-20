@@ -6,11 +6,22 @@ import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const FeedbackCard = ({
+interface FeedbackItem {
+  testimonial: string;
+  name: string;
+  position: string;
+  company: string;
+  image: string;
+}
+
+interface FeedbackCardProps extends FeedbackItem {
+  index: number;
+}
+const FeedbackCard: React.FC<FeedbackCardProps> = ({
   index,
   testimonial,
   name,
-  designation,
+  position,
   company,
   image,
 }) => (
@@ -29,7 +40,7 @@ const FeedbackCard = ({
             <span className="blue-text-gradient">@</span> {name}
           </p>
           <p className="mt-1 text-secondary text-[12px]">
-            {designation} of {company}
+            {position} of {company}
           </p>
         </div>
 
@@ -43,7 +54,7 @@ const FeedbackCard = ({
   </motion.div>
 );
 
-const Feedbacks = () => {
+const Feedbacks: React.FC = () => {
   return (
     <div className={`mt-12 bg-black-100 rounded-[20px]`}>
       <div
