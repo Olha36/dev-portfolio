@@ -1,18 +1,67 @@
-# React + Vite
+# 🌐 Olha Kucheruk – Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my personal developer portfolio built with **React**, **Next.js**, **Tailwind CSS**, **Three.js**, **Framer Motion**, and **SweetAlert**.  
+It showcases my projects, skills, and experience in modern frontend development.
 
-Currently, two official plugins are available:
+🚀 **Live Demo:** [My Portfolio]()  
+(Replace with your deployed link if different.)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
+- Responsive design optimized for all devices
+- Smooth animations with Framer Motion
+- Interactive 3D elements powered by Three.js
+- Project cards with live demo and GitHub links
+- SweetAlert popups for better UX
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
 
-## Credits
-Special thanks to [JavaScript Mastery](https://www.youtube.com/@javascriptmastery) for the original portfolio tutorial that inspired me.  
-I used it as a foundation and customized it with my own projects and improvements.
+## 🛠 Tech Stack
+- [React](https://react.dev/)  
+- [Next.js](https://nextjs.org/)  
+- [Tailwind CSS](https://tailwindcss.com/)  
+- [Three.js](https://threejs.org/)  
+- [Framer Motion](https://www.framer.com/motion/)  
+- [SweetAlert](https://sweetalert.js.org/)  
 
-# dev-portfolio
+---
+
+## 📂 Projects Highlighted
+Here are some of the projects featured in the portfolio:
+
+- 🌍 [Countries App](https://countries-rust-three.vercel.app/) – Explore countries with React + API integration  
+- 👟 [Shoes Shop](https://shoes-shop-team-3.vercel.app/) – E-commerce store built with a team  
+- 🎓 [Diploma UI](https://olha36.github.io/diploma-ui/) – Diploma project with UI/UX focus  
+
+---
+
+## ⚙️ Installation & Setup
+If you want to run this project locally:
+
+```bash
+# Clone the repository
+git clone https://github.com/Olha36/dev-portfolio.git
+
+# Navigate into the folder
+cd your-portfolio
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+
+📬 Contact
+
+Feel free to connect with me:
+
+GitHub: github.com/olha36
+
+LinkedIn: (add your profile link if you want)
+
+Email: (optional)
+
+📖 Credits
+
+Special thanks to JavaScript Mastery (https://www.youtube.com/@javascriptmastery) for the original portfolio tutorial that inspired me.
