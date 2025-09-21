@@ -124,7 +124,7 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "April 2023 - August 2025",
     points: [
-      "Teaching HTML5, CSS3, JavaScript, Node.js, React, and Git to teenagers through practical coding exercises and project-based learning.",
+      "Teaching HTML5, CSS3, JavaScript, React, and Git to teenagers through practical coding exercises and project-based learning.",
       "Developing comprehensive course materials and storing them in an organized GitHub repository for easy access",
       "Guiding students in creating projects such as sticker apps, to-do lists, and search tools using APIs.",
     ],

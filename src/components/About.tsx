@@ -67,8 +67,8 @@ const About: React.FC = () => {
         Solvd Laba, working on real-world projects and strengthening my skills
         in React, Next.js, TypeScript, and MUI. My background in software
         engineering (Master’s) and hands-on projects with APIs, forms, and UI
-        flows give me strong problem-solving and analytical skills. I aim to
-        grow into a Full-Stack Developer and contribute to impactful
+        flows gives me strong problem-solving and analytical skills. I aim to
+        grow into a senior developer and contribute to impactful
         international projects.
       </motion.p>
 
