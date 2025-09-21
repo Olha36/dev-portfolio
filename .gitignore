@@ -25,3 +25,4 @@ pnpm-debug.log*
 
 # Optional package manager caches
 .pnpm-store/
+.vercel
