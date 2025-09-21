@@ -6,6 +6,7 @@ import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { fadeIn, textVariant } from "../utils/motion";
 
+
 interface FeedbackItem {
   testimonial: string;
   name: string;
@@ -62,7 +63,9 @@ const Feedbacks: React.FC = () => {
       >
         <motion.div variants={textVariant()}>
           <p className={styles.sectionSubText}>What others say</p>
-          <h2 className={styles.sectionHeadText}>Testimonials.</h2>
+          <h2 className={`${styles.sectionHeadText} text-animation`}>
+            Testimonials.
+          </h2>
         </motion.div>
       </div>
       <div className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>

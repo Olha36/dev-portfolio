@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import React from "react";
 import Tilt from "react-parallax-tilt";
-
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
@@ -55,7 +54,7 @@ const About: React.FC = () => {
     <>
       <motion.div variants={textVariant()}>
         {/* <p className={styles.sectionSubText}>Introduction</p> */}
-        <h2 className={styles.sectionHeadText}>About me</h2>
+        <h2 className={`${styles.sectionHeadText} text-animation`}>About me</h2>
       </motion.div>
 
       <motion.p

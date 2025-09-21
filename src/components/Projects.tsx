@@ -125,7 +125,9 @@ const Projects: React.FC = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+        <h2 className={`${styles.sectionHeadText} text-animation`}>
+          Projects.
+        </h2>
       </motion.div>
 
       <div className="w-full flex">

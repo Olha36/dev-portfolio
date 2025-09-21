@@ -12,6 +12,7 @@ import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { textVariant } from "../utils/motion";
 
+
 interface ExperienceItem {
   title: string;
   company_name?: string;
@@ -73,7 +74,7 @@ const Experience: React.FC = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <h2 className={`${styles.sectionHeadText} text-center`}>
+        <h2 className={`${styles.sectionHeadText} text-start text-animation`}>
           Work Experience.
         </h2>
       </motion.div>

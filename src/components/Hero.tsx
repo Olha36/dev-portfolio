@@ -2,6 +2,7 @@ import React from "react";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 
+
 const Hero: React.FC = () => {
   return (
     <section className={`relative w-full h-screen mx-auto`}>
@@ -14,9 +15,14 @@ const Hero: React.FC = () => {
         </div>
 
         <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Hello, my <br /> name's <span className="text-[#EFBF04]">Olha</span>
+          <h1 className={`${styles.heroHeadText} text-white animation-styles`}>
+            Hi, my name's
           </h1>
+          <h2
+            className={`${styles.heroNameText} text-[#EFBF04] animation-span`}
+          >
+            Olha.
+          </h2>
         </div>
       </div>
 
