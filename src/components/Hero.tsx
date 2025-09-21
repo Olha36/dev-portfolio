@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
           <div className="w-1 sm:h-80 h-40 golden-gradient" />
         </div>
 
-        <div>
+        <div style={{width: '100%'}}>
           <h1 className={`${styles.heroHeadText} text-white animation-styles`}>
             Hi, my name's
           </h1>

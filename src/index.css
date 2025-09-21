@@ -35,7 +35,7 @@
   );
 }
 
-.green-pink-gradient {
+.white-pink-gradient {
   background: "#ffff15";
   background: linear-gradient(90.13deg, #ffffff 1.9%, #f422c7 97.5%);
   background: -webkit-linear-gradient(-90.13deg, #ffffff 1.9%, #f422c7 97.5%);
@@ -97,11 +97,83 @@
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
   display: inline-block;
-
 }
 
+.animation-styles {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 400px;
+  animation: type 2s steps(40, end) forwards;
+}
+
+.animation-span {
+  opacity: 0;
+  background: linear-gradient(
+    90deg,
+    #efbf04 0%,
+    #fff8e1 25%,
+    #f7d774 50%,
+    #b8860b 75%,
+    #483606 100% 
+  );
+  width: 400px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  overflow: hidden;
+  animation: shring-animation 1s steps(40, end) 2s forwards,
+    blink 0.5s step-end infinite alternate;
+}
+
+@media (max-width: 425px) {
+  .animation-styles,
+  .animation-span {
+    width: 90%;
+  }
+}
 @keyframes textclip {
   to {
     background-position: 200% center;
+  }
+}
+
+@keyframes shring-animation {
+  0% {
+    background-position: 0 0;
+    opacity: 0;
+    width: 0;
+  }
+  1% {
+    background-position: 0 0;
+    opacity: 1;
+    border-right: 1px solid orange;
+  }
+  50% {
+    background-position: 150px 0;
+    opacity: 1;
+    border-right: 1px solid orange;
+  }
+  100% {
+    background-position: 400px 0;
+    opacity: 1;
+    border-right: 1px solid orange;
+  }
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  1%,
+  99% {
+    border-right: 1px solid orange;
+  }
+  100% {
+    border-right: none;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
   }
 }
