@@ -2,20 +2,27 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React, { Suspense, useEffect } from "react";
 import CanvasLoader from "../Loader";
+import * as THREE from "three";
 
-const Earth = () => {
+const Earth: React.FC = () => {
   const earth = useGLTF("/planet/scene.gltf");
 
   useEffect(() => {
+    // Scale and position
     earth.scene.scale.set(0.25, 0.25, 0.25);
-
     earth.scene.position.set(0, 0, 0);
 
-    earth.scene.traverse((child) => {
-      if (child.isMesh) {
-        child.material.precision = "highp";
-        child.material.dithering = true;
-        child.renderOrder = 1;
+    // Traverse meshes to adjust material properties
+    earth.scene.traverse((child: THREE.Object3D) => {
+      if ((child as THREE.Mesh).isMesh) {
+        const mesh = child as THREE.Mesh;
+        const material = mesh.material as THREE.Material & {
+          precision?: string;
+          dithering?: boolean;
+        };
+        material.precision = "highp";
+        material.dithering = true;
+        mesh.renderOrder = 1;
       }
     });
   }, [earth]);

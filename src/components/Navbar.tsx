@@ -5,10 +5,10 @@ import { close, logo, menu } from "../assets";
 import { navLinks } from "../constants";
 import { styles } from "../styles";
 
-const Navbar = () => {
-  const [active, setActive] = useState("");
-  const [toggle, setToggle] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+const Navbar: React.FC = () => {
+  const [active, setActive] = useState<string>("");
+  const [toggle, setToggle] = useState<boolean>(false);
+  const [scrolled, setScrolled] = useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = () => {

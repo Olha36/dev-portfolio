@@ -12,7 +12,21 @@ import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { textVariant } from "../utils/motion";
 
-const ExperienceCard = ({ experience }) => {
+
+interface ExperienceItem {
+  title: string;
+  company_name?: string;
+  icon: string;
+  iconBg: string;
+  date: string;
+  points: string[];
+}
+
+interface ExperienceCardProps {
+  experience: ExperienceItem;
+}
+
+const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
@@ -56,21 +70,18 @@ const ExperienceCard = ({ experience }) => {
   );
 };
 
-const Experience = () => {
+const Experience: React.FC = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-center`}>
-          What I have done so far
-        </p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>
+        <h2 className={`${styles.sectionHeadText} text-start text-animation`}>
           Work Experience.
         </h2>
       </motion.div>
 
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>
-          {experiences.map((experience, index) => (
+          {experiences.map((experience: ExperienceItem, index: number) => (
             <ExperienceCard
               key={`experience-${index}`}
               experience={experience}

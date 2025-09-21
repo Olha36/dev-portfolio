@@ -136,7 +136,7 @@ const testimonials = [
     testimonial:
       "I highly recommend Olha as a highly skilled developer. We collaborated on an AI/ML project, and I was impressed by her professionalism and problem-solving abilities. Olha would be an excellent choice for your project.",
     name: "Olexandr Nоnіk",
-    designation: "Product Owner",
+    position: "Product Owner",
     company: "Wise Vision",
     image: "https://randomuser.me/api/portraits/men/9.jpg",
   },
@@ -150,15 +150,15 @@ const projects = [
     tags: [
       {
         name: "next.js",
-        color: "blue-text-gradient",
+        color: "coral-text-gradient",
       },
       {
         name: "stripe",
-        color: "green-text-gradient",
+        color: "mint-text-gradient",
       },
       {
         name: "strapi",
-        color: "pink-text-gradient",
+        color: "sky-text-gradient",
       },
     ],
     image: shop,
@@ -173,15 +173,15 @@ const projects = [
     tags: [
       {
         name: "typescript",
-        color: "blue-text-gradient",
+        color: "coral-text-gradient",
       },
       {
         name: "javascript",
-        color: "green-text-gradient",
+        color: "mint-text-gradient",
       },
       {
         name: "css",
-        color: "pink-text-gradient",
+        color: "sky-text-gradient",
       },
     ],
     image: validator,
@@ -195,15 +195,15 @@ const projects = [
     tags: [
       {
         name: "typescript",
-        color: "blue-text-gradient",
+        color: "coral-text-gradient",
       },
       {
         name: "next.js",
-        color: "green-text-gradient",
+        color: "mint-text-gradient",
       },
       {
         name: "css",
-        color: "pink-text-gradient",
+        color: "sky-text-gradient",
       },
     ],
     image: countries,

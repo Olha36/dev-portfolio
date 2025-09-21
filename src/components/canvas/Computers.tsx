@@ -4,7 +4,11 @@ import React, { Suspense, useEffect, useState } from "react";
 
 import CanvasLoader from "../Loader";
 
-const Computers = ({ isMobile }) => {
+interface ComputersProps {
+  isMobile: boolean;
+}
+
+const Computers: React.FC<ComputersProps> = ({ isMobile }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
 
   return (
@@ -29,7 +33,7 @@ const Computers = ({ isMobile }) => {
   );
 };
 
-const ComputersCanvas = () => {
+const ComputersCanvas: React.FC = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {

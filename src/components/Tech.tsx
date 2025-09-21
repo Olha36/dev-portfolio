@@ -4,7 +4,7 @@ import { technologies } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { BallCanvas } from "./canvas";
 
-const Tech = () => {
+const Tech: React.FC = () => {
   return (
     <div className="flex flex-row flex-wrap justify-center gap-10">
       {technologies.map((technology) => (

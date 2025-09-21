@@ -10,7 +10,16 @@ import React, { Suspense } from "react";
 
 import CanvasLoader from "../Loader";
 
-const Ball = (props) => {
+interface BallProps {
+  imgUrl: string;
+}
+
+interface BallCanvasProps {
+  icon: string;
+}
+
+
+const Ball: React.FC<BallProps> = (props) => {
   const [decal] = useTexture([props.imgUrl]);
 
   return (
@@ -37,7 +46,7 @@ const Ball = (props) => {
   );
 };
 
-const BallCanvas = ({ icon }) => {
+const BallCanvas: React.FC<BallCanvasProps> = ({ icon }) => {
   return (
     <Canvas
       frameloop="demand"

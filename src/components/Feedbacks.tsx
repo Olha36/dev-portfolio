@@ -6,11 +6,22 @@ import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const FeedbackCard = ({
+interface FeedbackItem {
+  testimonial: string;
+  name: string;
+  position: string;
+  company: string;
+  image: string;
+}
+
+interface FeedbackCardProps extends FeedbackItem {
+  index: number;
+}
+const FeedbackCard: React.FC<FeedbackCardProps> = ({
   index,
   testimonial,
   name,
-  designation,
+  position,
   company,
   image,
 }) => (
@@ -26,10 +37,10 @@ const FeedbackCard = ({
       <div className="mt-7 flex justify-between items-center gap-1">
         <div className="flex-1 flex flex-col">
           <p className="text-white font-medium text-[16px]">
-            <span className="blue-text-gradient">@</span> {name}
+            <span className="coral-text-gradient">@</span> {name}
           </p>
           <p className="mt-1 text-secondary text-[12px]">
-            {designation} of {company}
+            {position} of {company}
           </p>
         </div>
 
@@ -43,7 +54,7 @@ const FeedbackCard = ({
   </motion.div>
 );
 
-const Feedbacks = () => {
+const Feedbacks: React.FC = () => {
   return (
     <div className={`mt-12 bg-black-100 rounded-[20px]`}>
       <div
@@ -51,7 +62,9 @@ const Feedbacks = () => {
       >
         <motion.div variants={textVariant()}>
           <p className={styles.sectionSubText}>What others say</p>
-          <h2 className={styles.sectionHeadText}>Testimonials.</h2>
+          <h2 className={`${styles.sectionHeadText} text-animation`}>
+            Testimonials.
+          </h2>
         </motion.div>
       </div>
       <div className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
