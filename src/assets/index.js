@@ -1,62 +1,56 @@
-import logo from "./logo.svg";
-import backend from "./backend.png";
-import creator from "./creator.png";
-import mobile from "./mobile.png";
-import web from "./web.png";
-import github from "./github.png";
-import menu from "./menu.svg";
+import backend from "./backend.gif";
 import close from "./close.svg";
+import creator from "./creator.png";
+import github from "./github.png";
+import logo from "./logo.png";
+import menu from "./menu.svg";
+import mobile from "./mobile.gif";
+import web from "./web.gif";
 
 import css from "./tech/css.png";
-import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
 import mongodb from "./tech/mongodb.png";
-import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
-import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
-import threejs from "./tech/threejs.svg";
 
+import freelance from "./company/freelance.png";
+import goiteens from "./company/goiteens.png";
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+import solvd from "./company/solvd.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import shop from "./shoes-shop.jpg";
+import validator from "./validator.jpg";
+import countries from "./countries.jpg";
 
 export {
-  logo,
   backend,
-  creator,
-  mobile,
-  web,
-  github,
-  menu,
   close,
+  creator,
   css,
-  docker,
   figma,
+  freelance,
   git,
+  github,
+  goiteens,
   html,
   javascript,
+  logo,
+  menu,
+  meta,
+  mobile,
   mongodb,
-  nodejs,
   reactjs,
-  redux,
+  shop,
+  shopify,
+  solvd,
   tailwind,
   typescript,
-  threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
-  carrent,
-  jobit,
-  tripguide,
+  validator,
+  web,
+  countries,
 };
