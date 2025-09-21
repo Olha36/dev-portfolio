@@ -3,8 +3,7 @@
 This is my personal developer portfolio built with **React**, **Next.js**, **Tailwind CSS**, **Three.js**, **Framer Motion**, and **SweetAlert**.  
 It showcases my projects, skills, and experience in modern frontend development.
 
-🚀 **Live Demo:** [My Portfolio]()  
-(Replace with your deployed link if different.)
+🚀 **Live Demo:** [My Portfolio](https://portfolio-tan-tau-aobipoh6e1.vercel.app/)  
 
 ---
 
@@ -58,9 +57,8 @@ Feel free to connect with me:
 
 GitHub: github.com/olha36
 
-LinkedIn: (add your profile link if you want)
+LinkedIn: https://www.linkedin.com/in/olha-kucheruk-62b3ab217/
 
-Email: (optional)
 
 📖 Credits
 
