@@ -49,26 +49,21 @@
   -webkit-text-fill-color: transparent;
 }
 
-.green-text-gradient {
-  background: #11998e;
-  background: -webkit-linear-gradient(to top, #11998e, #38ef7d);
-  background: linear-gradient(to top, #11998e, #38ef7d);
+.coral-text-gradient {
+  background: linear-gradient(to right, #ff5f6d, #ffc3a0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.blue-text-gradient {
-  background: #56ccf2;
-  background: -webkit-linear-gradient(to top, #2f80ed, #56ccf2);
-  background: linear-gradient(to top, #2f80ed, #56ccf2);
+.sky-text-gradient {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.pink-text-gradient {
-  background: #ec008c;
-  background: -webkit-linear-gradient(to top, #ec008c, #fc6767);
-  background: linear-gradient(to top, #ec008c, #fc6767);
+.mint-text-gradient {
+  /* background: linear-gradient(to right, #43e97b, #38f9d7); */
+  background: linear-gradient(to right, #43e97b, #38f9d7, #abfff0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -114,7 +109,7 @@
     #fff8e1 25%,
     #f7d774 50%,
     #b8860b 75%,
-    #483606 100% 
+    #483606 100%
   );
   width: 400px;
   -webkit-background-clip: text;

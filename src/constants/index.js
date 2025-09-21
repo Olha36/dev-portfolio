@@ -150,15 +150,15 @@ const projects = [
     tags: [
       {
         name: "next.js",
-        color: "blue-text-gradient",
+        color: "coral-text-gradient",
       },
       {
         name: "stripe",
-        color: "green-text-gradient",
+        color: "mint-text-gradient",
       },
       {
         name: "strapi",
-        color: "pink-text-gradient",
+        color: "sky-text-gradient",
       },
     ],
     image: shop,
@@ -173,15 +173,15 @@ const projects = [
     tags: [
       {
         name: "typescript",
-        color: "blue-text-gradient",
+        color: "coral-text-gradient",
       },
       {
         name: "javascript",
-        color: "green-text-gradient",
+        color: "mint-text-gradient",
       },
       {
         name: "css",
-        color: "pink-text-gradient",
+        color: "sky-text-gradient",
       },
     ],
     image: validator,
@@ -195,15 +195,15 @@ const projects = [
     tags: [
       {
         name: "typescript",
-        color: "blue-text-gradient",
+        color: "coral-text-gradient",
       },
       {
         name: "next.js",
-        color: "green-text-gradient",
+        color: "mint-text-gradient",
       },
       {
         name: "css",
-        color: "pink-text-gradient",
+        color: "sky-text-gradient",
       },
     ],
     image: countries,
