@@ -23,7 +23,7 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import solvd from "./company/solvd.png";
 
-import shop from "./shoes-shop.jpg";
+import weather from './weather.jpg'
 import validator from "./validator.jpg";
 import countries from "./countries.jpg";
 
@@ -45,7 +45,7 @@ export {
   mobile,
   mongodb,
   reactjs,
-  shop,
+  weather,
   shopify,
   solvd,
   tailwind,

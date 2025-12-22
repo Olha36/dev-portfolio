@@ -7,7 +7,7 @@ import { projects } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { fadeIn, textVariant } from "../utils/motion";
-import Info from "./Info";
+
 
 interface Tag {
   name: string;
@@ -36,17 +36,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   image,
   source_code_link,
   live_demo_link,
-  isPrivate = false,
 }) => {
-  const [showInfo, setShowInfo] = useState(false);
 
   const handleGithubClick = (e: React.MouseEvent<HTMLDivElement>) => {
     e.stopPropagation();
-    if (isPrivate) {
-      setShowInfo(true);
-    } else {
+  
       window.open(source_code_link, "_blank");
-    }
+  
   };
 
   const handleOpenProject = (e: React.MouseEvent) => {
@@ -70,7 +66,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           <img
             src={image}
             alt="project_image"
-            className="w-full h-full object-cover rounded-2xl"
+            className="w-full h-full object-cover"
           />
 
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
@@ -104,19 +100,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
       </Tilt>
 
-      {showInfo && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 z-50">
-          <div className="bg-white p-6 rounded-lg max-w-md text-center relative">
-            <Info />
-            <button
-              onClick={() => setShowInfo(false)}
-              className="absolute top-2 right-2 text-black text-lg"
-            >
-              ✖
-            </button>
-          </div>
-        </div>
-      )}
+     
     </motion.div>
   );
 };
