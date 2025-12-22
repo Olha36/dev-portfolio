@@ -10,7 +10,7 @@ import {
   mobile,
   mongodb,
   reactjs,
-  shop,
+  weather,
   solvd,
   tailwind,
   typescript,
@@ -144,16 +144,16 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Shoes Shop",
+    name: "Weather App",
     description:
-      "An online retail platform offering a seamless, user-friendly way to browse, compare, and purchase footwear. Designed to highlight product variety and simplify shopping, it focuses on convenience, style, and customer satisfaction. ",
+      "A full stack weather app provides detailed and dynamic weather information, combining real-time data with a modern, user-friendly interface. Users can view hourly forecasts, weekly weather predictions, and interactive weather charts.",
     tags: [
       {
         name: "next.js",
         color: "coral-text-gradient",
       },
       {
-        name: "stripe",
+        name: "typescript",
         color: "mint-text-gradient",
       },
       {
@@ -161,9 +161,9 @@ const projects = [
         color: "sky-text-gradient",
       },
     ],
-    image: shop,
-    source_code_link: "https://shoes-shop-team-3.vercel.app/",
-    live_demo_link: "https://shoes-shop-team-3.vercel.app/",
+    image: weather,
+    source_code_link: "https://github.com/Olha36/weather-forecast.git",
+    live_demo_link: "https://weather-forecast-two-lovat.vercel.app/",
     isPrivate: true,
   },
   {
