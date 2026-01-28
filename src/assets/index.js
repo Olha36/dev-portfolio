@@ -26,6 +26,7 @@ import solvd from "./company/solvd.png";
 import weather from './weather.jpg'
 import validator from "./validator.jpg";
 import countries from "./countries.jpg";
+import quiz from './quiz.jpg'
 
 export {
   backend,
@@ -53,4 +54,5 @@ export {
   validator,
   web,
   countries,
+  quiz
 };

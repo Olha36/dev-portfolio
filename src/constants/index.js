@@ -17,6 +17,7 @@ import {
   validator,
   web,
   countries,
+  quiz
 } from "../assets";
 
 export const navLinks = [
@@ -209,6 +210,28 @@ const projects = [
     image: countries,
     source_code_link: "https://github.com/Olha36/countries-project.git",
     live_demo_link: "https://countries-rust-three.vercel.app/",
+  },
+  {
+    name: "Quiz app",
+    description:
+      "An interactive quiz application with dynamic content managed through Contentful. All quiz data and user results are stored in Contentful, while Algolia is used for fast search and efficient data retrieval.The app provides a smooth and responsive user experience with real-time result handling.",
+    tags: [
+      {
+        name: "typescript",
+        color: "coral-text-gradient",
+      },
+      {
+        name: "next.js",
+        color: "mint-text-gradient",
+      },
+      {
+        name: "css",
+        color: "sky-text-gradient",
+      },
+    ],
+    image: quiz,
+    source_code_link: "https://github.com/Olha36/quiz-app.git",
+    live_demo_link: "https://quiz-app-two-beta-19.vercel.app/",
   },
 ];
 
